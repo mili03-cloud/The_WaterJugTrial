@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Jug Trials — Oracle AI Mode</title>
+    <title>Water Jug Trials — Manual Mode</title>
     <link rel="stylesheet" href="gamepage.css">
 </head>
 
@@ -16,7 +16,7 @@
         <a href="index.html" class="back-link">Return to Hall</a>
 
         <!-- page title -->
-        <div class="page-title">✦ Oracle AI Trial ✦</div>
+        <div class="page-title">✦ Manual Trial ✦</div>
 
         <!-- CONTROLS -->
         <div class="controls">
@@ -30,9 +30,13 @@
             <input id="goalInput" type="number" min="1" placeholder="target">
 
             <button class="ctrl-btn" id="setBtn">Set</button>
-            <button class="ctrl-btn" id="solveAnimateBtn">Invoke Oracle</button>
-            <button class="ctrl-btn" id="clearBtn">Clear</button>
-            <a href="index.html" class="ctrl-btn" style="text-decoration:none;">&#8592; Menu</a>
+
+            <div class="controls-right">
+                <span>Goal: <strong id="goalDisplay">—</strong></span>
+                <span>Moves: <strong id="moveCount">0</strong></span>
+                <button class="ctrl-btn" id="clearBtn">Clear</button>
+                <a href="index.html" class="ctrl-btn" style="text-decoration:none;">&#8592; Menu</a>
+            </div>
         </div>
 
         <!-- TAP -->
@@ -48,6 +52,11 @@
                     <div class="water" id="waterA"></div>
                 </div>
                 <div class="amount" id="amountA">— / —</div>
+                <div class="jug-actions">
+                    <button class="jug-btn" id="fillABtn">Fill A</button>
+                    <button class="jug-btn" id="pourABtn">Pour A → B</button>
+                    <button class="jug-btn" id="emptyABtn">Empty A</button>
+                </div>
             </div>
 
             <!-- Jug B -->
@@ -57,15 +66,13 @@
                     <div class="water" id="waterB"></div>
                 </div>
                 <div class="amount" id="amountB">— / —</div>
+                <div class="jug-actions">
+                    <button class="jug-btn" id="fillBBtn">Fill B</button>
+                    <button class="jug-btn" id="pourBBtn">Pour B → A</button>
+                    <button class="jug-btn" id="emptyBBtn">Empty B</button>
+                </div>
             </div>
 
-        </div>
-
-        <!-- ORACLE SOLUTION PANEL -->
-        <div class="ai-solution-box">
-            <h3>Oracle Scroll</h3>
-            <div id="aiStats">Awaiting invocation…</div>
-            <div id="aiSteps">Set the vessels and invoke the Oracle to reveal the sacred path.</div>
         </div>
 
     </div>
@@ -74,7 +81,8 @@
     <script src="sounds.js"></script>
     <script src="state.js"></script>
     <script src="animations.js"></script>
-    <script src="ai_bfs.js"></script>
+    <script src="operations.js"></script>
+    <script src="drag.js"></script>
 
 </body>
 
