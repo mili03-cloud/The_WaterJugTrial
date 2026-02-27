@@ -16,7 +16,8 @@ body {
     min-height: 100vh;
     font-family: 'Raleway', sans-serif;
     color: #d8e8f8;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ================= GAME CONTAINER ================= */
