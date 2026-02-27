@@ -22,8 +22,8 @@ body {
 
 /* ================= GAME CONTAINER ================= */
 .game {
-    width: 1040px;
-    min-height: 620px;
+    width: 900px;
+    min-height: 540px;
     background: url("../background_image.png") no-repeat center center / cover;
     position: relative;
     border-radius: 20px;
