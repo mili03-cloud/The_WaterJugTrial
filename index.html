@@ -9,6 +9,9 @@
         href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Raleway:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="landing.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a1535">
+    <link rel="apple-touch-icon" href="icon-512.png">
 </head>
 
 <body>
@@ -137,6 +140,11 @@
     <div class="footer">✦ &nbsp; The Water Jug Trials &nbsp; ✦ &nbsp; An Ancient Arcane Puzzle &nbsp; ✦</div>
 
     <script src="landing.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
 </body>
 
 </html>

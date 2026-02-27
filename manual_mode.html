@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/game-controls.css">
     <link rel="stylesheet" href="css/game-jugs.css">
     <link rel="stylesheet" href="css/game-modals.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a1535">
+    <link rel="apple-touch-icon" href="icon-512.png">
 </head>
 
 <body>
@@ -88,6 +91,11 @@
     <script src="animations.js"></script>
     <script src="operations.js"></script>
     <script src="drag.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
 
 </body>
 

@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="css/game-jugs.css">
     <link rel="stylesheet" href="css/game-ai-panel.css">
     <link rel="stylesheet" href="css/game-modals.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a1535">
+    <link rel="apple-touch-icon" href="icon-512.png">
 </head>
 
 <body>
@@ -81,6 +84,11 @@
     <script src="state.js"></script>
     <script src="animations.js"></script>
     <script src="ai_bfs.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js');
+        }
+    </script>
 
 </body>
 
