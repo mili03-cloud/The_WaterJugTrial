@@ -95,8 +95,16 @@
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./sw.js');
         }
+        // Attempt to lock orientation to landscape
+        try { screen.orientation.lock('landscape').catch(() => { }); } catch (e) { }
     </script>
 
+    <!-- Rotate Phone Overlay (portrait mode on mobile) -->
+    <div class="rotate-overlay">
+        <div class="rotate-icon">📱</div>
+        <p>Rotate Thy Device</p>
+        <span class="rotate-sub">This trial requires landscape orientation</span>
+    </div>
 </body>
 
 </html>

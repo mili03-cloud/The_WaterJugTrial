@@ -3,7 +3,7 @@
    Caches all game files for offline play.
    ======================================================= */
 
-const CACHE_NAME = 'water-jug-trials-v1';
+const CACHE_NAME = 'water-jug-trials-v2';
 
 const FILES_TO_CACHE = [
     './',

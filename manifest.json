@@ -4,7 +4,7 @@
     "description": "An ancient arcane puzzle — measure the sacred volume by your own hand, or let the AI Oracle guide the way.",
     "start_url": "./index.html",
     "display": "standalone",
-    "orientation": "any",
+    "orientation": "landscape",
     "background_color": "#06080f",
     "theme_color": "#0a1535",
     "icons": [

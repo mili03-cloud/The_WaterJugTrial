@@ -77,3 +77,64 @@ body {
     white-space: nowrap;
     pointer-events: none;
 }
+
+/* ===================== ROTATE PHONE OVERLAY ===================== */
+.rotate-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    background: #06080f;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+}
+
+.rotate-overlay .rotate-icon {
+    font-size: 64px;
+    animation: rotatePhone 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 20px rgba(80, 160, 255, 0.6));
+}
+
+.rotate-overlay p {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: rgba(180, 220, 255, 0.85);
+    max-width: 280px;
+    line-height: 1.6;
+}
+
+.rotate-overlay .rotate-sub {
+    font-family: 'Raleway', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: rgba(160, 200, 255, 0.4);
+}
+
+@keyframes rotatePhone {
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg);
+    }
+
+    50%,
+    75% {
+        transform: rotate(90deg);
+    }
+}
+
+@media (orientation: portrait) and (max-width: 900px) {
+    .rotate-overlay {
+        display: flex;
+    }
+}
